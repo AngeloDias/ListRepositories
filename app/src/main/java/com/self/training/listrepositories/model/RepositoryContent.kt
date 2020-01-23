@@ -1,4 +1,4 @@
-package com.self.training.listrepositories
+package com.self.training.listrepositories.model
 
 object RepositoryContent {
     val ITEMS: MutableList<RepositoryCard> = ArrayList()
@@ -8,7 +8,11 @@ object RepositoryContent {
     init {
         // Add some sample items.
         for (i in 1..COUNT) {
-            addItem(putRepositoryInformation(i))
+            addItem(
+                putRepositoryInformation(
+                    i
+                )
+            )
         }
 
     }
@@ -25,7 +29,13 @@ object RepositoryContent {
     }
 
     private fun putRepositoryInformation(position: Int): RepositoryCard {
-        return RepositoryCard(position.toString(), "Item $position", "", "", "")
+        return RepositoryCard(
+            position.toString(),
+            "Item $position",
+            "",
+            "",
+            ""
+        )
     }
 
 }

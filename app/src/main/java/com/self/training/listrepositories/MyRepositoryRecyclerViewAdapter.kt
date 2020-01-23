@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.self.training.listrepositories.RepositoryFragment.OnListFragmentInteractionListener
+import com.self.training.listrepositories.model.RepositoryContent
 import kotlinx.android.synthetic.main.fragment_repository.view.*
 
 /**
