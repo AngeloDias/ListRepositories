@@ -38,7 +38,7 @@ class MyRepositoryRecyclerViewAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
         holder.mIdView.text = item.id
-        holder.mContentView.text = item.content
+        holder.mContentView.text = item.description
 
         with(holder.mView) {
             tag = item

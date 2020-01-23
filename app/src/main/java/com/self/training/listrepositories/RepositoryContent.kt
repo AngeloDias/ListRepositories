@@ -13,8 +13,9 @@ object RepositoryContent {
 
     }
 
-    data class RepositoryCard(val id: String, val content: String, val details: String) {
-        override fun toString(): String = content
+    data class RepositoryCard(val id: String, val description: String, val ownerUsername: String,
+                              val title: String, val fullName: String) {
+        override fun toString(): String = "Repository title: $title\n\nDescription: $description\n\nBy: $ownerUsername"
     }
 
     private fun addItem(item: RepositoryCard) {
@@ -24,7 +25,7 @@ object RepositoryContent {
     }
 
     private fun putRepositoryInformation(position: Int): RepositoryCard {
-        return RepositoryCard(position.toString(), "Item $position", "")
+        return RepositoryCard(position.toString(), "Item $position", "", "", "")
     }
 
 }
